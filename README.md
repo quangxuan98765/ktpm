@@ -6,11 +6,11 @@ This project contains automated test cases using **Selenium WebDriver** and **Py
 
 ## Table of Contents
 
-- [Requirements](https://github.com/quangxuan98765/SoftwareTestingAssignment2#requirements)
-- [Setup Instructions](https://github.com/quangxuan98765/SoftwareTestingAssignment2#setup-instructions)
-- [Running the Tests](https://github.com/quangxuan98765/SoftwareTestingAssignment2#running-the-tests)
-- [Generating Allure Reports](https://github.com/quangxuan98765/text-1255d50a7d8780e6b47cf16670c72c78?pvs=21)
-- [Notes](https://github.com/quangxuan98765/SoftwareTestingAssignment2#notes)
+- [Requirements](https://github.com/quangxuan98765/ktpm?tab=readme-ov-file#requirements)
+- [Setup Instructions](https://github.com/quangxuan98765/ktpm?tab=readme-ov-file#setup-instructions)
+- [Running the Tests](https://github.com/quangxuan98765/ktpm?tab=readme-ov-file#running-the-tests)
+- [Generating Allure Reports](https://github.com/quangxuan98765/ktpm?tab=readme-ov-file#generating-allure-reports)
+- [Notes](https://github.com/quangxuan98765/ktpm?tab=readme-ov-file#notes)
 
 ---
 
@@ -147,7 +147,6 @@ This command will save test results in the `allure-results` directory.
 
 - The Edge WebDriver version must match your installed Edge browser version to avoid compatibility issues.
 - If the OpenCart elements or layout changes, you may need to update locators in your tests.
-- Additional configuration may be required if running on CI/CD pipelines or virtual environments.
 
 ---
 
