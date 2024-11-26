@@ -19,11 +19,16 @@ def driver():
 # Người dùng đăng nhập 
 def login(driver, email, password):
     driver.get("https://demo.opencart.com/en-gb?route=account/login")
+    time.sleep(30)
     driver.find_element(By.ID, "input-email").send_keys(email)
     driver.find_element(By.ID, "input-password").send_keys(password)
     time.sleep(5) # Đợi trang tải để có thể nhấp
     # driver.find_element(By.XPATH, "//button[@class='btn btn-primary' and text()='Login']").click()
     WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//button[@class='btn btn-primary' and text()='Login']"))).click()
+    while not "My Account" in driver.title:
+        time.sleep(1)
+        WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//button[@class='btn btn-primary' and text()='Login']"))).click()
+        time.sleep(1)
     time.sleep(7)
 
 # Người dùng đăng nhập thành công

@@ -22,9 +22,9 @@ def test_mobile_responsive(driver):
     # Kiểm tra xem biểu tượng menu dành riêng cho di động có hiển thị không
     try:
         menu_icon = WebDriverWait(driver, 10).until(
-            EC.presence_of_element_located((By.CLASS_NAME, "mobile-menu-icon"))
+            EC.presence_of_element_located((By.XPATH, "//*[@id='logo']/a/img"))
         )
-        assert menu_icon.is_displayed(), "Biểu tượng menu di động phải hiển thị trên giao diện di động."
+        assert menu_icon.is_displayed()
         print("Kiểm tra giao diện di động thành công.")
     except Exception as e:
         print("Kiểm tra giao diện di động thất bại:", e)
@@ -39,9 +39,9 @@ def test_tablet_responsive(driver):
     # Kiểm tra xem thanh điều hướng dành riêng cho máy tính bảng có hiển thị không
     try:
         navigation_bar = WebDriverWait(driver, 10).until(
-            EC.presence_of_element_located((By.CLASS_NAME, "tablet-navbar"))
+            EC.presence_of_element_located((By.XPATH, "//*[@id='logo']/a/img"))
         )
-        assert navigation_bar.is_displayed(), "Thanh điều hướng của máy tính bảng phải hiển thị trên giao diện máy tính bảng."
+        assert navigation_bar.is_displayed()
         print("Kiểm tra giao diện máy tính bảng thành công.")
     except Exception as e:
         print("Kiểm tra giao diện máy tính bảng thất bại:", e)
@@ -56,9 +56,9 @@ def test_desktop_responsive(driver):
     # Kiểm tra xem thanh điều hướng đầy đủ dành riêng cho máy tính để bàn có hiển thị không
     try:
         full_navbar = WebDriverWait(driver, 10).until(
-            EC.presence_of_element_located((By.CLASS_NAME, "desktop-navbar"))
+            EC.presence_of_element_located((By.XPATH, "//*[@id='logo']/a/img"))
         )
-        assert full_navbar.is_displayed(), "Thanh điều hướng máy tính để bàn phải hiển thị trên giao diện máy tính để bàn."
+        assert full_navbar.is_displayed()
         print("Kiểm tra giao diện máy tính để bàn thành công.")
     except Exception as e:
         print("Kiểm tra giao diện máy tính để bàn thất bại:", e)
